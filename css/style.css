@@ -1,0 +1,88 @@
+*{
+    font-family: "Bree Serif", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.editor{
+    height: 50vh;
+}
+.result{
+    height: 100vh;
+    height: 100vw;
+
+    
+}
+
+.auto-save {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: fit-content;
+    height: 40px;
+    padding: 10px 5px;
+    background-color: rgb(40, 132, 243);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.auto-save p {
+    margin: 0;
+}
+
+.loader {
+    border: 6px solid #fff;
+    border-bottom: 6px solid transparent;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+textarea, iframe{
+    height: 100%;
+    width: 100%;
+    background: transparent;
+}
+textarea{
+    color: #e2e2e2;
+    background-color: #121212;
+    outline: none;
+    border: none;
+    resize: none;
+}
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {background: transparent;border: none;}
+::-webkit-scrollbar-track:hover {background: transparent;}
+::-webkit-scrollbar-thumb {background: #b1b1b1;}
+::-webkit-scrollbar-thumb:hover {background: #c3c3c3;}
+
+@media screen and (min-width: 992px) {
+    #controls{
+        display: none;
+    }
+    #html, #css, #js, #result{
+        display: block;
+    }
+}
+@media screen and (max-width: 991px) {
+    .editor{
+        height: 100vh;
+    }
+    #css, #js, #result{
+        display: none;
+    }
+}
